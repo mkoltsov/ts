@@ -19,3 +19,7 @@ val three: PartialFunction[Int, String] = { case 3 => "three" }
 val wildcard: PartialFunction[Int, String] = { case _ => "something else" }
 
 val partial = one orElse two orElse three orElse wildcard
+
+def count(l: List[_]) = l.size
+
+def hashcodes(l: Seq[_ <: AnyRef]) = l map (_.hashCode)
